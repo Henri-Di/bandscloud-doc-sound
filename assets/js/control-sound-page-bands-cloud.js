@@ -1,70 +1,79 @@
-// Função para formatar o tempo em minutos:segundos
-function formatTime(time) {
-    const minutes = Math.floor(time / 60);
-    const seconds = Math.floor(time % 60);
-    return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+// Definições iniciais do player
+const playPauseBtn = document.getElementById("play-pause");
+const prevTrackBtn = document.getElementById("prev-track");
+const nextTrackBtn = document.getElementById("next-track");
+const progressBar = document.getElementById("progress-bar");
+const songTitle = document.getElementById("song-title");
+const songArtist = document.getElementById("song-artist");
+const volumeControl = document.getElementById("volume-control");
+
+let audio = new Audio(); // Instancia o objeto de áudio
+let isPlaying = false; // Controle se a música está tocando
+let currentTrackIndex = 0; // Índice da faixa atual
+let tracks = [
+    {src: "../../assets/audio/FKJ - So Much to Me.mp3", title: "So Much To Me", artist: "FKJ"},
+    {src: "path/to/song2.mp3", title: "Música 2", artist: "Artista 2"},
+    {src: "path/to/song3.mp3", title: "Música 3", artist: "Artista 3"}
+];
+
+// Função para carregar e tocar a música
+function loadTrack(index) {
+    audio.src = tracks[index].src;
+    songTitle.innerText = tracks[index].title;
+    songArtist.innerText = tracks[index].artist;
+    audio.load();
+    audio.play();
+    playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+    isPlaying = true;
 }
 
-// Função para atualizar a porcentagem do volume
-function updateVolumePercentage(audio, volumePercentage) {
-    const volumePercentageValue = Math.round(audio.volume * 100); // Converte o valor do volume para porcentagem
-    volumePercentage.textContent = `${volumePercentageValue}%`; // Exibe a porcentagem
+// Função para alternar entre play e pause
+function togglePlayPause() {
+    if (isPlaying) {
+        audio.pause();
+        playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+    } else {
+        audio.play();
+        playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+    }
+    isPlaying = !isPlaying;
 }
 
-// Função para configurar o player de áudio
-function setupAudioPlayer(player) {
-    const audio = player.querySelector('.audio');
-    const playPauseBtn = player.querySelector('.play-pause-btn');
-    const seekBar = player.querySelector('.seek-bar');
-    const currentTimeEl = player.querySelector('.current-time');
-    const durationEl = player.querySelector('.duration');
-    const volumeControl = player.querySelector('#volumeControl'); // O controle de volume
-    const volumePercentage = player.querySelector('#volumePercentage'); // O span para a porcentagem de volume
-
-    // Play/Pause
-    playPauseBtn.addEventListener('click', () => {
-        if (audio.paused) {
-            audio.play();
-            playPauseBtn.textContent = '⏸'; // Pausa
-        } else {
-            audio.pause();
-            playPauseBtn.textContent = '▶'; // Play
-        }
-    });
-
-    // Atualiza o progresso do áudio
-    audio.addEventListener('timeupdate', () => {
-        const currentTime = audio.currentTime;
-        const duration = audio.duration || 0;
-
-        seekBar.value = (currentTime / duration) * 100 || 0;
-        currentTimeEl.textContent = formatTime(currentTime);
-    });
-
-    // Atualiza a duração após o carregamento dos metadados
-    audio.addEventListener('loadedmetadata', () => {
-        durationEl.textContent = formatTime(audio.duration);
-        seekBar.max = audio.duration;
-        updateVolumePercentage(audio, volumePercentage); // Inicializa a porcentagem do volume
-    });
-
-    // Busca (seek) o ponto de reprodução
-    seekBar.addEventListener('input', () => {
-        const duration = audio.duration || 0;
-        audio.currentTime = (seekBar.value / 100) * duration;
-    });
-
-    // Controle de volume
-    volumeControl.addEventListener('input', () => {
-        audio.volume = volumeControl.value; // Define o volume do áudio com base no controle
-        updateVolumePercentage(audio, volumePercentage); // Atualiza a porcentagem do volume
-    });
-
-    // Atualiza a porcentagem do volume no carregamento inicial
-    updateVolumePercentage(audio, volumePercentage); // Garante que a porcentagem esteja correta ao carregar
+// Função para avançar para a próxima música
+function nextTrack() {
+    currentTrackIndex = (currentTrackIndex + 1) % tracks.length; // Vai para o próximo, e reinicia se chegar ao fim
+    loadTrack(currentTrackIndex);
 }
 
-// Seleciona todos os players de áudio e configura-os
-document.querySelectorAll('.audio-player').forEach(player => {
-    setupAudioPlayer(player);
+// Função para retroceder para a música anterior
+function prevTrack() {
+    currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length; // Vai para a música anterior, e vai para o final se estiver no começo
+    loadTrack(currentTrackIndex);
+}
+
+// Atualiza a barra de progresso durante a reprodução
+audio.addEventListener("timeupdate", () => {
+    const progress = (audio.currentTime / audio.duration) * 100;
+    progressBar.style.width = progress + "%";
 });
+
+// Atualiza o volume conforme o controle deslizante é movido
+volumeControl.addEventListener("input", () => {
+    audio.volume = volumeControl.value / 100;
+});
+
+// Função para permitir que o usuário avance ou retroceda pela barra de progresso
+progressBar.addEventListener("click", (e) => {
+    const rect = progressBar.getBoundingClientRect(); // Obtém as dimensões da barra de progresso
+    const clickPosition = e.clientX - rect.left; // Posição do clique dentro da barra
+    const progress = (clickPosition / rect.width) * 100; // Percentual de onde o clique aconteceu
+    audio.currentTime = (progress / 100) * audio.duration; // Altera o tempo de reprodução
+});
+
+// Carrega a primeira faixa ao iniciar a página
+loadTrack(currentTrackIndex);
+
+// Event listeners para os botões de controle
+playPauseBtn.addEventListener("click", togglePlayPause);
+nextTrackBtn.addEventListener("click", nextTrack);
+prevTrackBtn.addEventListener("click", prevTrack);
