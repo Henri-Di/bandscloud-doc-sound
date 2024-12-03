@@ -39,41 +39,34 @@ function togglePlayPause() {
     isPlaying = !isPlaying;
 }
 
-// Função para avançar para a próxima música
+// Função para avançar para a próxima faixa
 function nextTrack() {
-    currentTrackIndex = (currentTrackIndex + 1) % tracks.length; // Vai para o próximo, e reinicia se chegar ao fim
+    currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
     loadTrack(currentTrackIndex);
 }
 
-// Função para retroceder para a música anterior
+// Função para voltar para a faixa anterior
 function prevTrack() {
-    currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length; // Vai para a música anterior, e vai para o final se estiver no começo
+    currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
     loadTrack(currentTrackIndex);
 }
 
-// Atualiza a barra de progresso durante a reprodução
-audio.addEventListener("timeupdate", () => {
-    const progress = (audio.currentTime / audio.duration) * 100;
+// Função para atualizar a barra de progresso da música
+audio.ontimeupdate = function() {
+    let progress = (audio.currentTime / audio.duration) * 100;
     progressBar.style.width = progress + "%";
-});
+    progressBar.setAttribute('aria-valuenow', progress);
+};
 
-// Atualiza o volume conforme o controle deslizante é movido
-volumeControl.addEventListener("input", () => {
-    audio.volume = volumeControl.value / 100;
-});
+// Função para controlar o volume
+volumeControl.oninput = function() {
+    audio.volume = volumeControl.value / 100;  // Ajusta o volume
+};
 
-// Função para permitir que o usuário avance ou retroceda pela barra de progresso
-progressBar.addEventListener("click", (e) => {
-    const rect = progressBar.getBoundingClientRect(); // Obtém as dimensões da barra de progresso
-    const clickPosition = e.clientX - rect.left; // Posição do clique dentro da barra
-    const progress = (clickPosition / rect.width) * 100; // Percentual de onde o clique aconteceu
-    audio.currentTime = (progress / 100) * audio.duration; // Altera o tempo de reprodução
-});
+// Adicionando eventos para os botões
+playPauseBtn.addEventListener('click', togglePlayPause);
+prevTrackBtn.addEventListener('click', prevTrack);
+nextTrackBtn.addEventListener('click', nextTrack);
 
-// Carrega a primeira faixa ao iniciar a página
+// Inicializa o player com a primeira música
 loadTrack(currentTrackIndex);
-
-// Event listeners para os botões de controle
-playPauseBtn.addEventListener("click", togglePlayPause);
-nextTrackBtn.addEventListener("click", nextTrack);
-prevTrackBtn.addEventListener("click", prevTrack);
