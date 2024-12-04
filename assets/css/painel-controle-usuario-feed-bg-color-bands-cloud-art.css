@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 3px;  
+    height: 3px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffe6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+}
+
+.box-logo-bands-cloud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 5px;
+    background-color: blueviolet;
+}
+
+#logo-bands-cloud-page-art {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Baumans', sans-serif;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+#icon-bands-cloud-page-art {
+    font-size: 3rem;
+    cursor: pointer;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-between; 
+    padding: 0 10px; 
+    margin: 0 auto; 
+}
+
+.col-8, .col-4 {
+    background-color: #f2f2f2;
+    border: 1px solid blueviolet;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
+.col-8 {
+    flex: 1 1 calc(66.66% - 20px); 
+    height: 80vh;
+    padding: 2rem;
+    overflow-y: scroll;
+    overflow-x: none;
+}
+
+.col-4 {
+    flex: 1 1 calc(13.33% - 20px); 
+    padding: 2rem;
+    height: 80vh;
+    overflow-y: scroll;
+    overflow-x: none;
+}
+
+h3,h4,h5 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h3 {
+    font-size: 1.5rem;
+    text-align: left;
+    color: blueviolet;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+h4 {
+    background-color: #ffffff;
+    color: blueviolet;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+h5 {
+    color: blueviolet;
+    padding: 1rem;
+    font-size: 1.35rem;
+    border-bottom: 1px solid blueviolet;
+}
+
+.container-menu-restrito-bands-cloud {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.menu-restrito-bands-cloud {
+    background-color: #ffffff;
+    color: #555;
+    padding: 5px 10px;
+    border: 1px solid blueviolet;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    text-align: left;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.menu-restrito-bands-cloud:hover {
+    background-color: blueviolet;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+
+.box-new-artistas-feed-bands-cloud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem; 
+}
+
+.card-box-new-artistas-feed-bands-cloud {
+    width: 6rem;  
+    height: 6rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 50%;  
+    border: 0.125rem solid #ffffff;  
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 1s ease;
+}
+
+.card-box-new-artistas-feed-bands-cloud:hover {
+    transform: scale(1.08);
+}
+
+.card-box-new-artistas-feed-bands-cloud img {
+    width: 100%;  
+    height: 100%; 
+    border-radius: 50%;
+    object-fit: cover; 
+    image-rendering: crisp-edges;
+}
+
+.publicacao-feed-bands-cloud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box-btn-publicacao-feed-bands-cloud {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.publicacao-feed-bands-cloud textarea {
+    width: 100%;
+    height: 10vh;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    color: #555;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.35rem;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-publicacao-feed-bands-cloud {
+    width: 9.25vw;
+    height: auto;
+    padding: 0.25rem;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.35rem;
+    color: blueviolet;
+    border-radius: 5px;
+    border: 1px solid blueviolet;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.btn-publicacao-feed-bands-cloud:hover{
+    background-color: blueviolet;
+    color: #ffffff;
+}
+
+.publicacao-feed-linha-tempo-bands-cloud{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+#title-name-user-feed-linha-tempo-bands-cloud{
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #555;
+    margin-left: 1.25rem;
+}
+
+.publicacao-feed-linha-tempo-artista-bands-cloud{
+    width: 87%;
+    height: auto;
+    padding: 0.5;
+    border-radius: 5px;
+    margin-top: -9.999rem;
+    margin-left: 8.888rem;
+    margin-bottom: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#col-publicacao-feed-linha-tempo-bands-cloud{
+    background-color: transparent;
+    display: flex;
+    padding: 1rem;
+    width: 30%;
+    height: auto;
+}
+
+#col-2-publicacao-feed-linha-tempo-bands-cloud{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 30%;
+    height: auto;
+}
+
+.img-publicacao-feed-bands-cloud{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.line-publicacao-feed-bands-cloud{
+    width: 100%;
+    height: 3%;
+    margin-top: 0.65rem;
+    border: 1px solid #888;
+    background-color: #d2d2d2;
+}
+
+.box-btn-publicacao-feed-bands-cloud{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-bg-publicacao-feed-bads-cloud{
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+    outline: none;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.35rem;
+    color: blueviolet;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid blueviolet;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 1s ease;
+}
+
+.btn-bg-publicacao-feed-bads-cloud:hover{
+    background-color: blueviolet;
+    color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+    .row {
+        gap: 10px;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .row {
+        gap: 10px;
+        padding: 0 20px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; 
+        padding: 0 20px; 
+    }
+
+    .col-8, .col-4 {
+        width: 100%;
+    }
+
+    .box-new-artistas-feed-bands-cloud{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card-box-new-artistas-feed-bands-cloud{
+        padding: 0.5rem;
+    }
+
+    .card-box-new-artistas-feed-bands-cloud img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .publicacao-feed-linha-tempo-artista-bands-cloud{
+        width: 70%;
+    }
+
+    #col-publicacao-feed-linha-tempo-bands-cloud{
+        width: 100%;
+    }
+
+    #col-2-publicacao-feed-linha-tempo-bands-cloud{
+        width: 100%;
+        gap: 15px;
+    }
+
+    .line-publicacao-feed-bands-cloud{
+        margin: -0.5rem auto;
+    }
+
+    .box-btn-publicacao-feed-bands-cloud{
+        display: grid;
+        grid-template-columns: repeat( 4, 1fr);
+    }
+
+    .btn-bg-publicacao-feed-bads-cloud{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .row {
+        padding: 0 15px;
+    }
+
+    .box-logo-bands-cloud {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    #logo-bands-cloud-page-art {
+        font-size: 3rem;
+    }
+
+    #icon-bands-cloud-page-art {
+        font-size: 2rem;
+    }
+
+    .menu-restrito-bands-cloud {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .card-box-new-artistas-feed-bands-cloud img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .box-logo-bands-cloud {
+        padding: 0.5rem;
+    }
+
+    .card-box-new-artistas-feed-bands-cloud img {
+        width: 100%;
+        height: 100%;
+    }
+}

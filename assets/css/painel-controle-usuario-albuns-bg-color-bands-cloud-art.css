@@ -290,6 +290,13 @@ h4 {
     color: blueviolet;
 }
 
+.loading-container {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+}
+
 @media (max-width: 1200px) {
     .row {
         gap: 10px; /* Menor espaço entre as colunas em telas médias */

@@ -56,8 +56,8 @@
                      
                     <div class="container icons-login-bands-cloud"> 
                     <i class="fab fa-facebook-f" id="icon-login-form-bands-cloud"></i>
-                    <i class="fab fa-google" id="icon-login-form-bands-cloud"></i>
                     <i class="fab fa-instagram" id="icon-login-form-bands-cloud"></i>
+                    <i class="fab fa-google" id="icon-login-form-bands-cloud"></i>
                     <i class="fab fa-linkedin-in" id="icon-login-form-bands-cloud"></i>
                     </div>
                 </div>
