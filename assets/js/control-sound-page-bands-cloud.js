@@ -12,19 +12,17 @@ let isPlaying = false; // Controle se a música está tocando
 let currentTrackIndex = 0; // Índice da faixa atual
 let tracks = [
     {src: "../../assets/audio/FKJ - So Much to Me.mp3", title: "So Much To Me", artist: "FKJ"},
-    {src: "path/to/song2.mp3", title: "Música 2", artist: "Artista 2"},
-    {src: "path/to/song3.mp3", title: "Música 3", artist: "Artista 3"}
+    {src: "../../assets/audio/Fkj & June Marieezy - Amsterjam (Offical Video).mp3", title: "Amsterjam", artist: "FKJ"},
+    {src: "../../assets/audio/FKJ - Ylang Ylang.mp3", title: "Ylang Ylang", artist: "FKJ"}
 ];
 
-// Função para carregar e tocar a música
+// Função para carregar a música sem tocar
 function loadTrack(index) {
     audio.src = tracks[index].src;
     songTitle.innerText = tracks[index].title;
     songArtist.innerText = tracks[index].artist;
-    audio.load();
-    audio.play();
-    playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
-    isPlaying = true;
+    audio.load(); // Carrega a música
+    // Não inicia a música aqui, apenas prepara
 }
 
 // Função para alternar entre play e pause
@@ -43,12 +41,18 @@ function togglePlayPause() {
 function nextTrack() {
     currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
     loadTrack(currentTrackIndex);
+    audio.play(); // Inicia a reprodução da próxima faixa automaticamente
+    playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>'; // Atualiza o ícone do botão
+    isPlaying = true; // Marca que está tocando
 }
 
 // Função para voltar para a faixa anterior
 function prevTrack() {
     currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
     loadTrack(currentTrackIndex);
+    audio.play(); // Inicia a reprodução da faixa anterior automaticamente
+    playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>'; // Atualiza o ícone do botão
+    isPlaying = true; // Marca que está tocando
 }
 
 // Função para atualizar a barra de progresso da música
@@ -68,5 +72,5 @@ playPauseBtn.addEventListener('click', togglePlayPause);
 prevTrackBtn.addEventListener('click', prevTrack);
 nextTrackBtn.addEventListener('click', nextTrack);
 
-// Inicializa o player com a primeira música
+// Inicializa o player com a primeira música, mas não toca ainda
 loadTrack(currentTrackIndex);

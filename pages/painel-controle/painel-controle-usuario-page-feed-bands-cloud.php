@@ -337,6 +337,7 @@
                 <div class="box-btn-publicacao-feed-bands-cloud">
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-thumbs-up"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-thumbs-down"></i></button>
+                    <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-comment"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-beam"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-hearts"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-squint-tears"></i></button>
@@ -402,6 +403,7 @@
                 <div class="box-btn-publicacao-feed-bands-cloud">
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-thumbs-up"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-thumbs-down"></i></button>
+                    <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-comment"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-beam"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-hearts"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-squint-tears"></i></button>
@@ -467,6 +469,7 @@
                 <div class="box-btn-publicacao-feed-bands-cloud">
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-thumbs-up"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-thumbs-down"></i></button>
+                    <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-comment"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-beam"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-hearts"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-squint-tears"></i></button>
@@ -532,6 +535,7 @@
                 <div class="box-btn-publicacao-feed-bands-cloud">
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-thumbs-up"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-thumbs-down"></i></button>
+                    <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-comment"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-beam"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-hearts"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-squint-tears"></i></button>
@@ -598,6 +602,7 @@
                 <div class="box-btn-publicacao-feed-bands-cloud">
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-thumbs-up"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-thumbs-down"></i></button>
+                    <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-comment"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-beam"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-hearts"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-squint-tears"></i></button>
@@ -663,6 +668,7 @@
                 <div class="box-btn-publicacao-feed-bands-cloud">
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-thumbs-up"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-thumbs-down"></i></button>
+                    <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-comment"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-beam"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-hearts"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-squint-tears"></i></button>
@@ -729,6 +735,7 @@
                 <div class="box-btn-publicacao-feed-bands-cloud">
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-thumbs-up"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-thumbs-down"></i></button>
+                    <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-comment"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-beam"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-hearts"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-squint-tears"></i></button>
@@ -794,6 +801,7 @@
                 <div class="box-btn-publicacao-feed-bands-cloud">
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-thumbs-up"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-thumbs-down"></i></button>
+                    <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-comment"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-beam"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-hearts"></i></button>
                     <button class="btn-bg-publicacao-feed-bads-cloud"><i class="fas fa-grin-squint-tears"></i></button>
@@ -805,6 +813,11 @@
         </div>
 
         <div class="col-4">
+        <h4><i class="fas fa-globe"></i> PUBLICAÇÕES</h4>
+        <div class="container-menu-restrito-bands-cloud">
+            <button class="menu-restrito-bands-cloud" onclick="window.location.href='../../pages/painel-controle/painel-controle-usuario-page-feed-bands-cloud.php';"><i class="fas fa-globe"></i> INICIO</button>
+        </div>
+
         <h4><i class="fas fa-user"></i> PERFIL</h4>
         <div class="container-menu-restrito-bands-cloud">
             <button class="menu-restrito-bands-cloud"><i class="fas fa-user"></i> INFORMAÇÕES</button>
@@ -826,7 +839,7 @@
         <h4><i class="fas fa-music"></i> MÚSICAS</h4>
         <div class="container-menu-restrito-bands-cloud">
             <button class="menu-restrito-bands-cloud"><i class="fas fa-music"></i> ARTISTAS</button>
-            <button class="menu-restrito-bands-cloud"><i class="fas fa-music"></i> ALBÚNS</button>
+            <button class="menu-restrito-bands-cloud" onclick="window.location.href='../../pages/painel-controle/painel-controle-usuario-page-albuns-bands-cloud.php';"><i class="fas fa-music"></i> ALBÚNS</button>
             <button class="menu-restrito-bands-cloud"><i class="fas fa-music"></i> MÚSICAS</button>
             <button class="menu-restrito-bands-cloud"><i class="fas fa-music"></i> VIDEOS</button>
             <button class="menu-restrito-bands-cloud"><i class="fas fa-music"></i> PLAYLISTS</button>

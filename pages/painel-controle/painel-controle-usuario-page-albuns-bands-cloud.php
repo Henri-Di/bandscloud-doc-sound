@@ -21,60 +21,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/painel-controle-usuario-albuns-bg-color-bands-cloud-art.css">
 
-            <!-- Estilo do Loader (CSS) -->
+    <!-- Estilo do Loader (CSS) -->
     <style>
-/* Loader CSS */
-#loader {
-    position: fixed; /* Fixa o loader no centro da tela */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999; /* Coloca o loader à frente de todos os outros elementos */
-    background: #fff; /* Fundo branco */
-    display: flex; /* Usa Flexbox para centralizar o conteúdo */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    gap: 10px;
-}
+    /* Loader CSS */
+    #loader {
+        position: fixed; /* Fixa o loader no centro da tela */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999; /* Coloca o loader à frente de todos os outros elementos */
+        background: #fff; /* Fundo branco */
+        display: flex; /* Usa Flexbox para centralizar o conteúdo */
+        align-items: center; /* Centraliza verticalmente */
+        justify-content: center; /* Centraliza horizontalmente */
+        gap: 10px;
+    }
 
-/* Cada spinner será uma div com animação */
-.loader-spinner {
-    width: 20px; /* Largura fixa para a barra */
-    height: 80px; /* Altura inicial do loader */
-    background: #f3f3f3; /* Cor de fundo cinza */
-    border-radius: 10px; /* Bordas arredondadas para parecer uma barra */
-    animation: grow-shrink 3s ease-in-out infinite, rainbow 4s linear infinite; /* Animações para crescimento e mudança de cor */
-}
+    /* Cada spinner será uma div com animação */
+    .loader-spinner {
+        width: 20px; /* Largura fixa para a barra */
+        height: 80px; /* Altura inicial do loader */
+        background: #f3f3f3; /* Cor de fundo cinza */
+        border-radius: 10px; /* Bordas arredondadas para parecer uma barra */
+        animation: grow-shrink 3s ease-in-out infinite, rainbow 4s linear infinite; /* Animações para crescimento e mudança de cor */
+    }
 
-/* Atraso escalonado para os elementos do loader (7 divs) */
-.loader-spinner:nth-child(1) {
-    animation-delay: 0s;
-}
+    /* Atraso escalonado para os elementos do loader (7 divs) */
+    .loader-spinner:nth-child(1) {
+        animation-delay: 0s;
+    }
 
-.loader-spinner:nth-child(2) {
-    animation-delay: 0.2s;
-}
+    .loader-spinner:nth-child(2) {
+        animation-delay: 0.2s;
+    }
 
-.loader-spinner:nth-child(3) {
-    animation-delay: 0.4s;
-}
+    .loader-spinner:nth-child(3) {
+        animation-delay: 0.4s;
+    }
 
-.loader-spinner:nth-child(4) {
-    animation-delay: 0.6s;
-}
+    .loader-spinner:nth-child(4) {
+        animation-delay: 0.6s;
+    }
 
-.loader-spinner:nth-child(5) {
-    animation-delay: 0.8s;
-}
+    .loader-spinner:nth-child(5) {
+        animation-delay: 0.8s;  
+    }
 
-.loader-spinner:nth-child(6) {
-    animation-delay: 1s;
-}
+    .loader-spinner:nth-child(6) {
+        animation-delay: 1s;
+    }
 
-.loader-spinner:nth-child(7) {
-    animation-delay: 1.2s;
-}
+    .loader-spinner:nth-child(7) {
+        animation-delay: 1.2s;
+    }
 
 /* Animação de crescimento e encolhimento vertical (ajustado para uma variação mais suave) */
 @keyframes grow-shrink {
@@ -121,7 +121,7 @@
                 setTimeout(function() {
                     var loader = document.getElementById("loader");
                     loader.style.display = "none"; // Esconde o loader
-                }, 5000); 
+                }, 3000); 
             }
         });
     </script>
@@ -499,6 +499,11 @@
 
 
         <div class="col-4">
+        <h4><i class="fas fa-globe"></i> PUBLICAÇÕES</h4>
+        <div class="container-menu-restrito-bands-cloud">
+            <button class="menu-restrito-bands-cloud" onclick="window.location.href='../../pages/painel-controle/painel-controle-usuario-page-feed-bands-cloud.php';"><i class="fas fa-globe"></i> INICIO</button>
+        </div>
+
         <h4><i class="fas fa-user"></i> PERFIL</h4>
         <div class="container-menu-restrito-bands-cloud">
             <button class="menu-restrito-bands-cloud"><i class="fas fa-user"></i> INFORMAÇÕES</button>
@@ -520,7 +525,7 @@
         <h4><i class="fas fa-music"></i> MÚSICAS</h4>
         <div class="container-menu-restrito-bands-cloud">
             <button class="menu-restrito-bands-cloud"><i class="fas fa-music"></i> ARTISTAS</button>
-            <button class="menu-restrito-bands-cloud"><i class="fas fa-music"></i> ALBÚNS</button>
+            <button class="menu-restrito-bands-cloud" onclick="window.location.href='../../pages/painel-controle/painel-controle-usuario-page-albuns-bands-cloud.php';"><i class="fas fa-music"></i> ALBÚNS</button>
             <button class="menu-restrito-bands-cloud"><i class="fas fa-music"></i> MÚSICAS</button>
             <button class="menu-restrito-bands-cloud"><i class="fas fa-music"></i> VIDEOS</button>
             <button class="menu-restrito-bands-cloud"><i class="fas fa-music"></i> PLAYLISTS</button>
